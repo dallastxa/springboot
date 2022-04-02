@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/springboot.iml" filepath="$PROJECT_DIR$/springboot.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_01_01_quickstart/springboot_01_01_quickstart.iml" filepath="$PROJECT_DIR$/springboot_01_01_quickstart/springboot_01_01_quickstart.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_02_base_configuration/springboot_02_base_configuration.iml" filepath="$PROJECT_DIR$/springboot_02_base_configuration/springboot_02_base_configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_04_junit/springboot_04_junit.iml" filepath="$PROJECT_DIR$/springboot_04_junit/springboot_04_junit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_05_mybatis/springboot_05_mybatis.iml" filepath="$PROJECT_DIR$/springboot_05_mybatis/springboot_05_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_06_mybatis_plus/springboot_06_mybatis_plus.iml" filepath="$PROJECT_DIR$/springboot_06_mybatis_plus/springboot_06_mybatis_plus.iml" />
     </modules>
   </component>
 </project>
