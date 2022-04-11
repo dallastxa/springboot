@@ -1,5 +1,6 @@
 package com.itheima.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.itheima.controller.utils.R;
 import com.itheima.domain.Book;
 import com.itheima.service.IBookService;
@@ -42,9 +43,25 @@ public class BookController2 {
         return new R(true,bookService.getById(id));
     }
 
-    @GetMapping("{currentPage}/{pageSize}")
+/*    @GetMapping("{currentPage}/{pageSize}")
     public R getPage(@PathVariable int currentPage, @PathVariable int pageSize){
-        return new R(true,bookService.getPage(currentPage,pageSize));
+        IPage<Book> page = bookService.getPage(currentPage, pageSize);
+        //如果当前页码值大于总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值
+        if(currentPage>page.getPages()){
+            page=bookService.getPage((int) page.getPages(),pageSize);
+        }
+        return new R(true,page);
+    }*/
+    @GetMapping("{currentPage}/{pageSize}")
+    public R getPage(@PathVariable int currentPage, @PathVariable int pageSize,Book book){
+/*        System.out.println("参数==>"+name);
+        System.out.println("参数==>"+book);*/
+        IPage<Book> page = bookService.getPage(currentPage, pageSize,book);
+        //如果当前页码值大于总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值
+        if(currentPage>page.getPages()){
+            page=bookService.getPage((int) page.getPages(),pageSize,book);
+        }
+        return new R(true,page);
     }
 
 }
